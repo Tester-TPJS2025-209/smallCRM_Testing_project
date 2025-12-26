@@ -1,1 +1,2 @@
 It is a textfile to describe the work undone
+smallCRM test cases have been added.
