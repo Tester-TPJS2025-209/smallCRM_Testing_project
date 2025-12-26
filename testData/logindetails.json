@@ -1,0 +1,15 @@
+{
+    "url":"http://49.249.28.218:8081/TestServer/Build/Small_CRM/",
+    "username" : "phillipe",
+    "email" : "phillipe@gmail.com",
+    "password" : "Macedonia@123",
+    "newPassword" : "Greece@123",
+    "contact" : "1234567890",
+    "adress" : "Pella, Macedeonia",
+    "subject" : "Alexander",
+    "task" : "billing",
+    "priority" : "urgent(functional problem)",
+    "description" : "Alexander has gone mad, says he will conquor Athens, Sparta, Thebes, Corinth, Mycenae, Troy, Persia",
+    "adminUsername" : "admin",
+    "adminPassword" : "admin"
+}
