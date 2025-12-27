@@ -21,6 +21,7 @@ class Profile{
 
     get getEmail(){
         return (async()=>{
+            // await this.gender.scrollIntoViewIfNeeded()
             return await this.gender
         })();
     }

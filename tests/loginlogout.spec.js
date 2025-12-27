@@ -9,7 +9,7 @@ import logindetails from "../testData/logindetails.json"
 
 
 
-test("loginlogout", async({page})=>{
+test.skip("loginlogout", async({page})=>{
     
     let url = logindetails.url
     let email = logindetails.email

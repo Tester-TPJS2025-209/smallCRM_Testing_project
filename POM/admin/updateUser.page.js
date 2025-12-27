@@ -11,7 +11,8 @@ class UpdateUser{
     }
 
     async getGender(){
-        let gender = await this.genderDD.innerText()
+        await this.genderDD.scrollIntoViewIfNeeded()
+        let gender = await this.genderDD
         return gender
     }
 

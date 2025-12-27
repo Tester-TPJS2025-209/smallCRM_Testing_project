@@ -6,7 +6,7 @@ class HomePageAdm{
         this.manageQt = page.getByRole("link", {name: "Manage Quotes"})
         this.settings = page.locator(".iconset.top-settings-dark ")
         this.logoutBtn = page.getByRole("link", {name: "Log Out"})
-        this.downloadChart = page.locator(".highcharts-button.highcharts-contextbutton.highcharts-button-normal")
+        this.downloadChart = page.locator(".highcharts-button.highcharts-contextbutton")
         this.downPdf = page.locator("//div[.='Download PDF document']")
     }
 

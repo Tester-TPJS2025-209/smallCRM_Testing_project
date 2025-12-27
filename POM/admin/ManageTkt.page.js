@@ -13,7 +13,8 @@ class ManageTkt{
     }
 
     async getStatus(){
-        let statusTxt = await this.status.innerText()
+        let statusTxt = await this.status
+        return statusTxt
     }
 
 }

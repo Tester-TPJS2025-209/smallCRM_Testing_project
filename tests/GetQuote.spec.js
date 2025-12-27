@@ -8,7 +8,7 @@ import quote from "../POM/users/quote.page.js"
 import LandingPage from "../POM/landinPage.page.js"
 import logindetails from "../testData/logindetails.json"
 
-test("add address", async({page})=>{
+test("get quote", async({page})=>{
 
     let url = logindetails.url
     let email = logindetails.email

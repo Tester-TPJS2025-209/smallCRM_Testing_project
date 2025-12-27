@@ -3,9 +3,10 @@ import LandingPage from "../POM/landinPage.page.js"
 import AdminPage from "../POM/admin/adminPage.page.js"
 import HomePageAdm from "../POM/admin/homepage.page.js"
 import logindetails from "../testData/logindetails.json"
-import path from "node:path"
+import ChangePass from "../POM/admin/changePass.page.js"
+// import path from "node:path"
 
-test("download pdf", async({page})=>{
+test("change pass admin", async({page})=>{
     let adminUsername = logindetails.adminUsername
     let adminPassword = logindetails.adminPassword
     let url = logindetails.url
@@ -15,17 +16,21 @@ test("download pdf", async({page})=>{
     let landingPg = new LandingPage(page)
     let loginPg = new AdminPage(page)
     let homePg = new HomePageAdm(page)
+    let changePassPage = new ChangePass(page)
+
 
     await landingPg.adminPage()
 
     await loginPg.login(adminUsername, adminPassword)
 
-    await homePg.downloadChart.click({force: true, trial: true})
+    await homePg.cpassword.click()
 
-    
-    let [pdfFile] = await Promise.all([page.waitForEvent("download"),homePg.downPdf.dispatchEvent("click")])
+    page.once("dialog", async(dialog)=>{
+        console.log(dialog.message())
+        await dialog.accept()
+    })
 
-    await pdfFile.saveAs(path.join(__dirname, "../downloads", pdfFile.suggestedFilename()))
+    await changePassPage.changePassword("admin", "admin") 
 
     await homePg.logout()
 

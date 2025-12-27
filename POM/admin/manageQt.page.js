@@ -1,5 +1,5 @@
 class quote{
-    constructor(page){
+    constructor(page, num){
         this.view = page.locator("//td[.="+`${num}`+"]/following-sibling::td/descendant::button[.='View']")
     }
 

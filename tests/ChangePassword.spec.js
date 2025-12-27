@@ -7,7 +7,7 @@ import changePass from "../POM/users/cpassword.page.js"
 import LandingPage from "../POM/landinPage.page.js"
 import logindetails from "../testData/logindetails.json"
 
-test("add address", async({page})=>{
+test("Change user password", async({page})=>{
 
     let url = logindetails.url
     let email = logindetails.email

@@ -6,7 +6,7 @@ import profile from "../POM/users/profile.page.js"
 import LandingPage from "../POM/landinPage.page.js"
 import logindetails from "../testData/logindetails.json"
 
-test("add address", async({page})=>{
+test("User address change", async({page})=>{
 
     let url = logindetails.url
     let email = logindetails.email

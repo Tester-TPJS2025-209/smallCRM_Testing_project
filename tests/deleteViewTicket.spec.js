@@ -5,7 +5,7 @@ import dashboard from "../POM/users/dashboard.page.js"
 import LandingPage from "../POM/landinPage.page.js"
 import logindetails from "../testData/logindetails.json"
 
-test("view Ticket", async({page})=>{
+test("delete view Ticket", async({page})=>{
     let url = logindetails.url
     let email = logindetails.email
     let contact = logindetails.contact
