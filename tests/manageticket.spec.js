@@ -25,7 +25,7 @@ test("manage ticket", async({page})=>{
 
     // await expect.soft(await manageTktPage.getStatus()).toHaveText("Open")
 
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('load');
 
     page.once("dialog", async(dialog)=>{
         console.log(dialog.message())
@@ -34,6 +34,6 @@ test("manage ticket", async({page})=>{
     await manageTktPage.postReply("The color of the logo will be changes shortly")
     await expect.soft(await manageTktPage.getStatus()).toHaveText("closed")
 
-    await page.waitForLoadState('networkidle')
+    // await page.waitForLoadState('networkidle')
     await homePg.logout()
 })
